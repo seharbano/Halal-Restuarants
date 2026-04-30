@@ -5,6 +5,7 @@ import Map from "../components/Map";
 import RestaurantCard from "../components/RestaurantCard";
 import { restaurants } from "../utilis/mock";
 import Tabs from "../components/Tabs";
+
 const Home = () => {
   const navigate = useNavigate();
 const [activeTab, setActiveTab] = useState("Turkish");
@@ -15,6 +16,7 @@ const filteredRestaurants = restaurants.filter((item) => {
     (tag) => tag.toLowerCase() === activeTab.toLowerCase()
   );
 });
+
   return (
     <div className="flex flex-1 overflow-hidden">
 
@@ -31,10 +33,16 @@ const filteredRestaurants = restaurants.filter((item) => {
         <div className="space-y-4">
           {filteredRestaurants.map((item) => (
             <RestaurantCard
-              key={item.id}
-              {...item}
-              onClick={() => navigate(`/restaurant/${item.id}`)}
-            />
+  key={item.id}
+  image={item.image}
+  title={item.title}
+  cuisine={item.cuisine}
+  distance={item.distance}
+  rating={item.rating}
+  tags={item.tags}
+  isVerified={item.isVerified}
+  onClick={() => navigate(`/restaurant/${item.id}`)}
+/>
           ))}
         </div>
 

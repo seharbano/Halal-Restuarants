@@ -1,3 +1,14 @@
+type Props = {
+  image: string;
+  title: string;
+  cuisine: string;
+  distance: string;
+  rating: number;
+  tags?: string[];
+  isVerified?: boolean;
+  onClick: () => void;
+};
+
 export default function RestaurantCard({
   image,
   title,
@@ -7,7 +18,7 @@ export default function RestaurantCard({
   tags = [],
   isVerified = false,
   onClick,
-}) {
+}: Props) {
   return (
     <div
       onClick={onClick}
