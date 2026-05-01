@@ -4,7 +4,7 @@ type TabsProps = {
 };
 
 export default function Tabs({ activeTab, setActiveTab }: TabsProps) {
-  const tabs = ["Turkish", "Arab", "Pakistani", "Open Now"];
+  const tabs = [ "All","Open Now","Turkish", "Arab", "Pakistani"];
 
   return (
     <div className="flex gap-2 overflow-x-scroll mb-4">

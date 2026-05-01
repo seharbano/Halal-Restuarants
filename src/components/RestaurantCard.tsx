@@ -1,3 +1,4 @@
+import { DEFAULT_RESTAURANT_IMAGE } from "../constants/images";
 type Props = {
   image: string;
   title: string;
@@ -27,7 +28,7 @@ export default function RestaurantCard({
       {/* Image Section */}
       <div className="relative">
         <img
-          src={image}
+          src={image || DEFAULT_RESTAURANT_IMAGE}
           alt={title}
           className="h-40 w-full object-cover"
         />

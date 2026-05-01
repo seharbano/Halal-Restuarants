@@ -1,8 +1,8 @@
 export default function Navbar() {
   return (
-    <div className="flex justify-between items-center bg-white px-6 py-3 shadow">
-      <div className="flex gap-x-12">
-        <h1 className="text-xl font-bold text-green-700">Verdant Halal</h1>
+    <div className="flex justify-between items-center flex-wrap gap-y-4 bg-white px-6 py-3 shadow">
+      <div className="flex gap-x-12 gap-y-4 flex-wrap">
+        <h1 className="text-xl text-nowrap font-bold text-green-700">Verdant Halal</h1>
         <ul className="space-x-4 flex">
           <li className="border-b-2 border-b-green-200 p-2  cursor-pointer">Discover</li>
           <li className="hover:border-b-2 border-b-green-200 p-2  cursor-pointer">
